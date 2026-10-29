@@ -58,6 +58,17 @@ div {
     float: left;
     width: 25%;
     height: 100%;
+}
+
+.submenu {
+    height: 10%;
+}
+
+.submenu-box {
+    float: left;
+    width: 25%;
+    height: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,3 +79,10 @@ table {
     text-align: center;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
