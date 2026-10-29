@@ -52,12 +52,16 @@ div {
 
 .suborders {
     height: 10%;
+    
 }
 
 .subordersmenu {
     float: left;
     width: 25%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .submenu {
