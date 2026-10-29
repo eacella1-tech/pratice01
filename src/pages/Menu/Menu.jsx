@@ -1,4 +1,4 @@
-// 메뉴 관리
+import { Link, Outlet } from 'react-router-dom'
 const Menu = () => {
 
   return (

@@ -1,4 +1,4 @@
-// 재고 관리 
+import { Link, Outlet } from 'react-router-dom'
 const Inven = () => {
 
   return (

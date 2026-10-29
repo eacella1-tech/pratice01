@@ -6,7 +6,7 @@ const Admin = () => {
         <div className="container">
             <div className="header">
                 <h4>매장 관리 시스템</h4>
-                <button onClick={() => { navFi("/") }}>로그아웃</button>
+                <button onClick={() => { navi("/") }}>로그아웃</button>
             </div>
             <div className="menubox">
                 <Link to="dashboard"><div className="menu">대시보드</div></Link>
