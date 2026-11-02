@@ -1,20 +1,26 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import client from "../../api/client";
+import { useEffect } from "react";
 
-const OrdersDelete = ({ setOrders }) => {
-    const navi = useNavigate();
+const OrdersDelete = () => {
 
     const [delTarget, setDelTarget] = useState();
+    const [orders, setOrders] = useState([]);
+    const getCurrent = () => {
+        client.get("/orders").then(resp => {
+            setOrders(resp.data);
+        })
+    }
+
+    useEffect(() => {
+        getCurrent();
+    }, []);
 
     const remove = () => {
-
-
-        if (delTarget === "") {
-            alert("삭제하실 ID를 입력해주세요.")
-        }
-        setOrders(prev => prev.filter(e => e.id != delTarget));
-        setDelTarget("");
-        navi("/admin/orders/ordersread");
+        client.delete(`/orders/${delTarget}`).then(() => {
+            setDelTarget("");
+            getCurrent();
+        })
     }
 
 

@@ -2,21 +2,25 @@ import { useState } from 'react';
 import { Routes, Route, useNavigate, Link, Outlet } from 'react-router-dom'
 import Admin from './pages/Admin/Admin';
 import DashBoard from './pages/DashBoard/DashBoard';
+
 import Menu from './pages/Menu/Menu';
 import MenuRead from './pages/Menu/MenuRead';
 import MenuCreate from './pages/Menu/MenuCreate';
 import MenuUpdate from './pages/Menu/MenuUpdate';
 import MenuDelete from './pages/Menu/MenuDelete';
+
 import Inven from './pages/Inven/Inven';
 import InvenRead from './pages/Inven/InvenRead';
 import InvenCreate from './pages/Inven/InvenCreate';
 import InvenUpdate from './pages/Inven/InvenUpdate';
 import InvenDelete from './pages/Inven/InvenDelete';
+
 import Orders from './pages/Order/Order';
 import OrdersRead from './pages/Order/OrderRead';
 import OrdersCreate from './pages/Order/OrderCreate';
 import OrdersUpdate from './pages/Order/OrderUpdate';
 import OrdersDelete from './pages/Order/OrderDelete';
+
 import Staffs from './pages/Staff/Staff';
 import StaffsRead from './pages/Staff/StaffRead';
 import StaffsCreate from './pages/Staff/StaffCreate';

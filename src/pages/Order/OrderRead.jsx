@@ -1,6 +1,18 @@
-const OrdersRead = ({ orders }) => {
+import { useEffect, useState } from "react";
+import client from "../../api/client";
+
+const OrdersRead = () => {
+
+    const [orders, setOrders] = useState([]);
+
+    useEffect(() => {
+        client.get("/orders").then(resp => {
+            setOrders(resp.data);
+        });
+    }, []);
+
     return (
-        <table border={1} align='center'>
+        <table border={1} align="center">
             <thead>
                 <tr>
                     <th>주문번호</th>
@@ -10,9 +22,9 @@ const OrdersRead = ({ orders }) => {
             </thead>
             <tbody>
                 {
-                    orders.map((e, i) => {
+                    orders.map((e) => {
                         return (
-                            <tr key={i}>
+                            <tr key={e.id}>
                                 <td>{e.id}</td>
                                 <td>{e.item}</td>
                                 <td>{e.total}</td>
@@ -23,6 +35,6 @@ const OrdersRead = ({ orders }) => {
             </tbody>
         </table>
     );
-}
+};
 
-export default OrdersRead
+export default OrdersRead;
